@@ -1,250 +1,169 @@
-from transformers import AutoModelForCausalLM, AutoTokenizer
-import torch
-from typing import List, Dict
+import google.generativeai as genai
+import os
 import json
 import re
-
+from typing import List, Dict, Optional
+import traceback
+import time
+from google.api_core import exceptions
 
 class QuizGenerator:
     def __init__(self):
-        print("Initializing Quiz Generator...")
-        # Use Phi-3-mini for quiz generation (smaller, faster, free)
-        # If model download fails, will use rule-based generation
-        model_name = "microsoft/Phi-3-mini-4k-instruct"
-        
-        self.model = None
-        self.tokenizer = None
-        
-        try:
-            print("Attempting to load Phi-3 model (this may take a few minutes on first run)...")
-            self.tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-            self.model = AutoModelForCausalLM.from_pretrained(
-                model_name,
-                torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                device_map="auto" if torch.cuda.is_available() else None,
-                trust_remote_code=True,
-                low_cpu_mem_usage=True
-            )
-            print("Quiz Generator initialized successfully with Phi-3")
-        except Exception as e:
-            print(f"Error loading Phi-3: {e}")
-            print("Note: Model download requires internet connection and ~7GB disk space")
-            print("Falling back to rule-based generation (works offline)")
-            self.model = None
-            self.tokenizer = None
-    
-    def generate_quiz(self, topics: List[str], num_questions: int = 18, difficulty: str = "medium") -> Dict:
-        """Generate quiz questions based on topics"""
-        
-        if self.model is None:
-            return self._generate_rule_based_quiz(topics, num_questions, difficulty)
-        
-        try:
-            return self._generate_llm_quiz(topics, num_questions, difficulty)
-        except Exception as e:
-            print(f"LLM generation failed: {e}, falling back to rule-based")
-            return self._generate_rule_based_quiz(topics, num_questions, difficulty)
-    
-    def _generate_llm_quiz(self, topics: List[str], num_questions: int, difficulty: str) -> Dict:
-        """Generate quiz using Phi-3 model"""
-        topics_text = ", ".join(topics[:10])  # Use first 10 topics
-        
-        prompt = f"""Generate {num_questions} multiple choice questions (MCQs) based on these topics: {topics_text}
+        print("Initializing Quiz Generator with Gemini API...")
+        self.api_key = os.getenv("GEMINI_API_KEY")
+        self.models_to_try = []
 
-Difficulty level: {difficulty}
-
-Format each question as JSON:
-{{
-  "question": "Question text here?",
-  "options": ["Option A", "Option B", "Option C", "Option D"],
-  "correct_answer": 0
-}}
-
-Return only valid JSON array of questions. Make questions {difficulty} level - {"simple and straightforward" if difficulty == "easy" else "challenging and detailed" if difficulty == "hard" else "moderate complexity"}.
-"""
-        
-        messages = [
-            {"role": "system", "content": "You are a helpful assistant that generates educational quiz questions."},
-            {"role": "user", "content": prompt}
-        ]
-        
-        inputs = self.tokenizer.apply_chat_template(
-            messages,
-            add_generation_prompt=True,
-            tokenize=True,
-            return_tensors="pt"
-        )
-        
-        if torch.cuda.is_available():
-            inputs = inputs.to("cuda")
-        
-        with torch.no_grad():
-            outputs = self.model.generate(
-                inputs,
-                max_new_tokens=2048,
-                temperature=0.7,
-                do_sample=True,
-                top_p=0.9
-            )
-        
-        response = self.tokenizer.decode(outputs[0][inputs.shape[1]:], skip_special_tokens=True)
-        
-        # Extract JSON from response
-        json_match = re.search(r'\[.*\]', response, re.DOTALL)
-        if json_match:
-            questions = json.loads(json_match.group())
+        if not self.api_key:
+            print("WARNING: GEMINI_API_KEY not found in environment variables.")
         else:
-            # Fallback: try to parse questions manually
-            questions = self._parse_questions_from_text(response)
-        
-        # Ensure we have the right number of questions
-        if len(questions) < num_questions:
-            # Generate more using rule-based
-            additional = self._generate_rule_based_questions(topics, num_questions - len(questions), difficulty)
-            questions.extend(additional)
-        
-        return {
-            "questions": questions[:num_questions],
-            "difficulty": difficulty,
-            "topic_count": len(topics)
-        }
-    
-    def _parse_questions_from_text(self, text: str) -> List[Dict]:
-        """Parse questions from LLM text response"""
-        questions = []
-        # Simple parsing logic
-        question_blocks = re.split(r'\n\s*\n', text)
-        
-        for block in question_blocks:
-            if '?' in block:
-                lines = block.split('\n')
-                question = ""
-                options = []
-                correct = 0
+            try:
+                genai.configure(api_key=self.api_key)
                 
-                for line in lines:
-                    if '?' in line:
-                        question = line.strip()
-                    elif re.match(r'^[A-D][\.\)]', line):
-                        options.append(re.sub(r'^[A-D][\.\)]\s*', '', line).strip())
-                    elif 'correct' in line.lower():
-                        match = re.search(r'([A-D])', line)
-                        if match:
-                            correct = ord(match.group(1)) - ord('A')
+                # 1. List available models
+                available_models = []
+                try:
+                    for m in genai.list_models():
+                        if 'generateContent' in m.supported_generation_methods:
+                            available_models.append(m.name)
+                    print(f"Available models: {available_models}")
+                except Exception as e:
+                    print(f"Could not list models: {e}")
+                    # Fallback list if listing fails
+                    available_models = ["models/gemini-1.5-flash", "models/gemini-pro"]
+
+                # 2. Build prioritized list of usable models
+                # Priority: Flash (fast/cheap) -> Pro (better) -> Legacy
+                # We prioritize newer flash models as they are usually most generous with free tier
+                candidates = [
+                    "gemini-1.5-flash", 
+                    "gemini-flash",
+                    "gemini-2.0-flash", 
+                    "gemini-1.5-pro",
+                    "gemini-pro"
+                ]
                 
-                if question and len(options) == 4:
-                    questions.append({
-                        "question": question,
-                        "options": options,
-                        "correct_answer": correct
-                    })
+                self.models_to_try = []
+                
+                # Add matched candidates first
+                for candidate in candidates:
+                    for m in available_models:
+                        if candidate in m and m not in self.models_to_try:
+                            self.models_to_try.append(m)
+                
+                # Add any remaining available models that weren't in our candidate list
+                # This ensures we don't miss any obscure working model associated with the key
+                for m in available_models:
+                    if m not in self.models_to_try:
+                        self.models_to_try.append(m)
+                
+                # If list is empty (listing failed + no fallback matches), force some defaults
+                if not self.models_to_try:
+                    self.models_to_try = ["models/gemini-1.5-flash", "models/gemini-pro"]
+                    
+                print(f"Model priority list: {self.models_to_try}")
+                
+            except Exception as e:
+                print(f"Error configuring Gemini API: {e}")
+                self.models_to_try = []
+
+    def generate_quiz(self, topics: List[str], num_questions: int = 10, difficulty: str = "medium") -> Dict:
+        """Generate quiz questions using Gemini API with robust fallback and retries"""
+        print(f"Generating {num_questions} questions for topics: {topics[:3]}...")
         
-        return questions
-    
-    def _generate_rule_based_quiz(self, topics: List[str], num_questions: int, difficulty: str) -> Dict:
-        """Generate quiz using rule-based approach"""
+        if not self.models_to_try:
+            print("No models available, using basic fallback.")
+            return self._generate_fallback_quiz(topics, num_questions, difficulty)
+
+        prompt = self._create_prompt(topics, num_questions, difficulty)
+        
+        # Try each model in our priority list
+        for model_name in self.models_to_try:
+            print(f"Attempting generation with model: {model_name}")
+            
+            # Simple retry logic for transient errors on the SAME model
+            for attempt in range(2): 
+                try:
+                    model = genai.GenerativeModel(model_name)
+                    response = model.generate_content(prompt)
+                    return self._parse_gemini_response(response.text, topics, difficulty)
+                
+                except exceptions.ResourceExhausted:
+                    print(f"Rate limit hit for {model_name}. Switching to next model...")
+                    # Break inner loop to try next model immediately
+                    break 
+                    
+                except Exception as e:
+                    print(f"Error with {model_name} (Attempt {attempt+1}): {e}")
+                    if attempt == 1: # Last attempt for this model
+                        print(f"Model {model_name} failed. Trying next model...")
+                    else:
+                        time.sleep(1) # Short wait before retry same model
+                        
+        print("All models failed. Using rule-based fallback.")
+        return self._generate_fallback_quiz(topics, num_questions, difficulty)
+
+    def _create_prompt(self, topics: List[str], num_questions: int, difficulty: str) -> str:
+        topics_str = ", ".join(topics)
+        return f"""
+        You are an expert quiz generator. Create {num_questions} multiple-choice questions (MCQs) based on the following topics: {topics_str}.
+        
+        Difficulty Level: {difficulty}
+        
+        Format constraints:
+        1. Return ONLY a valid JSON array of objects.
+        2. Each object must have:
+           - "question": string (The question text)
+           - "options": array of 4 strings (Possible answers)
+           - "correct_answer": integer (0 for A, 1 for B, 2 for C, 3 for D)
+        3. Do not include markdown formatting (like ```json), just the raw JSON string.
+        4. Do NOT use LaTeX or markdown formatting for math (no $ symbols).
+        5. Use UNICODE text for math symbols where possible to make it look professional (e.g. use "A⁻¹" instead of "A^-1", "x²" instead of "x^2", "θ" instead of "theta", "∫" instead of "integral").
+        6. Ensure questions are relevant to the topics provided.
+        """
+
+    def _parse_gemini_response(self, response_text: str, topics: List[str], difficulty: str) -> Dict:
+        try:
+            # Clean up potential markdown code blocks
+            clean_text = response_text.replace("```json", "").replace("```", "").strip()
+            
+            questions = json.loads(clean_text)
+            
+            # Basic validation
+            valid_questions = []
+            for q in questions:
+                if "question" in q and "options" in q and "correct_answer" in q:
+                    if isinstance(q["options"], list) and len(q["options"]) == 4:
+                        valid_questions.append(q)
+            
+            return {
+                "questions": valid_questions,
+                "difficulty": difficulty,
+                "topic_count": len(topics)
+            }
+        except json.JSONDecodeError:
+            print(f"Failed to decode JSON from Gemini: {response_text[:100]}...")
+            return self._generate_fallback_quiz(topics, 1, difficulty)
+
+    def _generate_fallback_quiz(self, topics: List[str], num_questions: int, difficulty: str) -> Dict:
+        """Simple rule-based fallback if API fails"""
         questions = []
-        
-        # Use all topics, cycling if needed
-        topic_index = 0
-        question_templates = [
-            ("What is the main concept of {topic}?", [
-                "The fundamental principles and core ideas",
-                "Advanced theoretical frameworks",
-                "Practical applications only",
-                "None of the above"
-            ]),
-            ("Which aspect is most important in {topic}?", [
-                "Understanding core concepts",
-                "Memorizing facts",
-                "Avoiding the topic",
-                "None of the above"
-            ]),
-            ("How does {topic} relate to the overall subject?", [
-                "It's an integral part of the subject",
-                "It's completely separate",
-                "It's optional content",
-                "None of the above"
-            ]),
-            ("What would be a key characteristic of {topic}?", [
-                "Relevant and important concepts",
-                "Unrelated information",
-                "Outdated material",
-                "None of the above"
-            ]),
-        ]
+        topic_count = len(topics)
         
         for i in range(num_questions):
-            topic = topics[topic_index % len(topics)]
-            template_idx = i % len(question_templates)
-            question_template, default_options = question_templates[template_idx]
-            
-            # Adjust based on difficulty
-            if difficulty == "easy":
-                question = question_template.format(topic=topic)
-                options = [
-                    default_options[0],  # Usually correct
-                    f"Something unrelated to {topic}",
-                    f"An advanced concept in {topic}",
-                    "None of the above"
-                ]
-            elif difficulty == "hard":
-                question = f"Which of the following best describes advanced understanding of {topic}?"
-                options = [
-                    f"Deep knowledge of {topic} principles and applications",
-                    f"Basic introduction to {topic}",
-                    f"Simple overview of {topic}",
-                    f"Superficial knowledge of {topic}"
-                ]
-            else:  # medium
-                question = question_template.format(topic=topic)
-                options = [
-                    default_options[0],
-                    default_options[1] if len(default_options) > 1 else f"Alternative view of {topic}",
-                    default_options[2] if len(default_options) > 2 else f"Different aspect of {topic}",
-                    "None of the above"
-                ]
-            
+            topic = topics[i % topic_count] if topics else "General Knowledge"
             questions.append({
-                "question": question,
-                "options": options,
+                "question": f"What is a key aspect of {topic}?",
+                "options": [
+                    f"It is fundamental to the subject.",
+                    "It is unrelated.",
+                    "It is deprecated.",
+                    "None of the above."
+                ],
                 "correct_answer": 0
             })
             
-            topic_index += 1
-        
         return {
-            "questions": questions[:num_questions],
+            "questions": questions,
             "difficulty": difficulty,
             "topic_count": len(topics)
         }
-    
-    def _generate_rule_based_questions(self, topics: List[str], count: int, difficulty: str) -> List[Dict]:
-        """Generate additional rule-based questions"""
-        questions = []
-        question_templates = [
-            "What is the primary focus of {topic}?",
-            "Which aspect is most important in {topic}?",
-            "How does {topic} relate to the overall subject?",
-            "What would be a key characteristic of {topic}?",
-        ]
-        
-        for i in range(count):
-            topic = topics[i % len(topics)]
-            template = question_templates[i % len(question_templates)]
-            
-            question = template.format(topic=topic)
-            options = [
-                f"Option A related to {topic}",
-                f"Option B related to {topic}",
-                f"Option C related to {topic}",
-                f"Option D related to {topic}"
-            ]
-            
-            questions.append({
-                "question": question,
-                "options": options,
-                "correct_answer": 0
-            })
-        
-        return questions

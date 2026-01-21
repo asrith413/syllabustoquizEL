@@ -2,6 +2,9 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 import shutil
 from pathlib import Path
 from typing import List, Dict, Optional

@@ -1,0 +1,802 @@
+[
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: Why is Determinant of a Matrix considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It tastes good\nD) It causes global warming\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Inverse of a Matrix represent?\nA) A type of food\nB) A holiday destination\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: Why is System of Linear Equations considered important?\nA) It causes global warming\nB) It is not important at all\nC) It solves critical problems in the field\nD) It tastes good\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Which of the following is a key property of Cramer's Rule?\nA) It is a color\nB) It is only found in space\nC) It satisfies specific axioms and theorems related to Cramer's Rule\nD) It is edible\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: In the context of the syllabus, what does Matrix Multiplication represent?\nA) A type of food\nB) A holiday destination\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvalues represent?\nA) A holiday destination\nB) A musical instrument\nC) A core unit of study with specific learning outcomes\nD) A type of food\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: How is Eigenvectors typically calculated or derived?\nA) By guessing randomly\nB) By asking a friend\nC) By measuring the temperature\nD) Using specific formulas and algorithmic steps\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: In the context of the syllabus, what does Vector Spaces represent?\nA) A musical instrument\nB) A holiday destination\nC) A type of food\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: In the context of the syllabus, what does Linear Independence represent?\nA) A holiday destination\nB) A musical instrument\nC) A type of food\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: Which of the following is a key property of Basis and Dimension?\nA) It is a color\nB) It is edible\nC) It satisfies specific axioms and theorems related to Basis and Dimension\nD) It is only found in space\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: How is Linear Transformations typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By guessing randomly\nD) By asking a friend\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: How is Rank of a Matrix typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By guessing randomly\nC) By measuring the temperature\nD) By asking a friend\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: Why is Gaussian Elimination considered important?\nA) It causes global warming\nB) It solves critical problems in the field\nC) It is not important at all\nD) It tastes good\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: What is the primary definition of Orthogonal Matrices?\nA) A totally unrelated historical event\nB) The fundamental mathematical or scientific concept defining Orthogonal Matrices\nC) A fictional character\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: Why is Diagonalization considered important?\nA) It solves critical problems in the field\nB) It causes global warming\nC) It is not important at all\nD) It tastes good\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: How is Inner Product Spaces typically calculated or derived?\nA) By guessing randomly\nB) By asking a friend\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: How is Calculus typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By asking a friend\nD) By guessing randomly\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: What is the primary definition of Differential Equations?\nA) A type of biological organism\nB) A totally unrelated historical event\nC) A fictional character\nD) The fundamental mathematical or scientific concept defining Differential Equations\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: Why is Integration considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It tastes good\nD) It causes global warming\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: Why is Limits considered important?\nA) It solves critical problems in the field\nB) It tastes good\nC) It causes global warming\nD) It is not important at all\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: What is the primary definition of Determinant of a Matrix?\nA) A totally unrelated historical event\nB) A type of biological organism\nC) A fictional character\nD) The fundamental mathematical or scientific concept defining Determinant of a Matrix\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: What is the primary definition of Inverse of a Matrix?\nA) The fundamental mathematical or scientific concept defining Inverse of a Matrix\nB) A type of biological organism\nC) A totally unrelated historical event\nD) A fictional character\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: Why is System of Linear Equations considered important?\nA) It causes global warming\nB) It tastes good\nC) It solves critical problems in the field\nD) It is not important at all\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Which of the following is a key property of Cramer's Rule?\nA) It is edible\nB) It is only found in space\nC) It satisfies specific axioms and theorems related to Cramer's Rule\nD) It is a color\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: How is Matrix Multiplication typically calculated or derived?\nA) By measuring the temperature\nB) By guessing randomly\nC) Using specific formulas and algorithmic steps\nD) By asking a friend\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: What is the primary definition of Eigenvalues?\nA) A totally unrelated historical event\nB) A type of biological organism\nC) A fictional character\nD) The fundamental mathematical or scientific concept defining Eigenvalues\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvectors represent?\nA) A core unit of study with specific learning outcomes\nB) A type of food\nC) A holiday destination\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: Which of the following is a key property of Vector Spaces?\nA) It is a color\nB) It is edible\nC) It is only found in space\nD) It satisfies specific axioms and theorems related to Vector Spaces\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: How is Linear Independence typically calculated or derived?\nA) By measuring the temperature\nB) By guessing randomly\nC) Using specific formulas and algorithmic steps\nD) By asking a friend\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: How is Basis and Dimension typically calculated or derived?\nA) By guessing randomly\nB) By measuring the temperature\nC) Using specific formulas and algorithmic steps\nD) By asking a friend\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: How is Linear Transformations typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By guessing randomly\nD) By asking a friend\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Rank of a Matrix represent?\nA) A musical instrument\nB) A type of food\nC) A holiday destination\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: In the context of the syllabus, what does Gaussian Elimination represent?\nA) A musical instrument\nB) A core unit of study with specific learning outcomes\nC) A type of food\nD) A holiday destination\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: How is Orthogonal Matrices typically calculated or derived?\nA) By asking a friend\nB) Using specific formulas and algorithmic steps\nC) By guessing randomly\nD) By measuring the temperature\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: Why is Diagonalization considered important?\nA) It tastes good\nB) It is not important at all\nC) It solves critical problems in the field\nD) It causes global warming\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: How is Inner Product Spaces typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By guessing randomly\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Which of the following is a key property of Calculus?\nA) It is a color\nB) It satisfies specific axioms and theorems related to Calculus\nC) It is only found in space\nD) It is edible\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: In the context of the syllabus, what does Differential Equations represent?\nA) A musical instrument\nB) A core unit of study with specific learning outcomes\nC) A type of food\nD) A holiday destination\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: Which of the following is a key property of Integration?\nA) It is only found in space\nB) It satisfies specific axioms and theorems related to Integration\nC) It is a color\nD) It is edible\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: How is Limits typically calculated or derived?\nA) By measuring the temperature\nB) By asking a friend\nC) By guessing randomly\nD) Using specific formulas and algorithmic steps\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: How is Determinant of a Matrix typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By guessing randomly\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: Why is Inverse of a Matrix considered important?\nA) It tastes good\nB) It solves critical problems in the field\nC) It is not important at all\nD) It causes global warming\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: How is System of Linear Equations typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By guessing randomly\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: What is the primary definition of Cramer's Rule?\nA) A totally unrelated historical event\nB) The fundamental mathematical or scientific concept defining Cramer's Rule\nC) A fictional character\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: Why is Matrix Multiplication considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It causes global warming\nD) It tastes good\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: Why is Eigenvalues considered important?\nA) It solves critical problems in the field\nB) It causes global warming\nC) It is not important at all\nD) It tastes good\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvectors represent?\nA) A core unit of study with specific learning outcomes\nB) A musical instrument\nC) A holiday destination\nD) A type of food\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: Which of the following is a key property of Vector Spaces?\nA) It is a color\nB) It is only found in space\nC) It is edible\nD) It satisfies specific axioms and theorems related to Vector Spaces\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: How is Linear Independence typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By asking a friend\nC) By guessing randomly\nD) By measuring the temperature\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: Why is Basis and Dimension considered important?\nA) It is not important at all\nB) It tastes good\nC) It causes global warming\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: What is the primary definition of Linear Transformations?\nA) The fundamental mathematical or scientific concept defining Linear Transformations\nB) A totally unrelated historical event\nC) A type of biological organism\nD) A fictional character\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: How is Rank of a Matrix typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By asking a friend\nD) By guessing randomly\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: Why is Gaussian Elimination considered important?\nA) It solves critical problems in the field\nB) It causes global warming\nC) It is not important at all\nD) It tastes good\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: What is the primary definition of Orthogonal Matrices?\nA) A type of biological organism\nB) The fundamental mathematical or scientific concept defining Orthogonal Matrices\nC) A totally unrelated historical event\nD) A fictional character\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: Which of the following is a key property of Diagonalization?\nA) It is only found in space\nB) It is a color\nC) It is edible\nD) It satisfies specific axioms and theorems related to Diagonalization\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: Which of the following is a key property of Inner Product Spaces?\nA) It is a color\nB) It is edible\nC) It is only found in space\nD) It satisfies specific axioms and theorems related to Inner Product Spaces\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Which of the following is a key property of Calculus?\nA) It is edible\nB) It is a color\nC) It satisfies specific axioms and theorems related to Calculus\nD) It is only found in space\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: How is Differential Equations typically calculated or derived?\nA) By measuring the temperature\nB) By guessing randomly\nC) By asking a friend\nD) Using specific formulas and algorithmic steps\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: What is the primary definition of Integration?\nA) The fundamental mathematical or scientific concept defining Integration\nB) A type of biological organism\nC) A fictional character\nD) A totally unrelated historical event\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: In the context of the syllabus, what does Limits represent?\nA) A core unit of study with specific learning outcomes\nB) A holiday destination\nC) A musical instrument\nD) A type of food\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Determinant of a Matrix represent?\nA) A core unit of study with specific learning outcomes\nB) A type of food\nC) A musical instrument\nD) A holiday destination\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Inverse of a Matrix represent?\nA) A core unit of study with specific learning outcomes\nB) A holiday destination\nC) A type of food\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: In the context of the syllabus, what does System of Linear Equations represent?\nA) A musical instrument\nB) A type of food\nC) A holiday destination\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Which of the following is a key property of Cramer's Rule?\nA) It is only found in space\nB) It satisfies specific axioms and theorems related to Cramer's Rule\nC) It is a color\nD) It is edible\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: In the context of the syllabus, what does Matrix Multiplication represent?\nA) A core unit of study with specific learning outcomes\nB) A holiday destination\nC) A type of food\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvalues represent?\nA) A musical instrument\nB) A type of food\nC) A holiday destination\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: Why is Eigenvectors considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It tastes good\nD) It causes global warming\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: In the context of the syllabus, what does Vector Spaces represent?\nA) A musical instrument\nB) A type of food\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: What is the primary definition of Linear Independence?\nA) A fictional character\nB) A totally unrelated historical event\nC) A type of biological organism\nD) The fundamental mathematical or scientific concept defining Linear Independence\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: How is Basis and Dimension typically calculated or derived?\nA) By guessing randomly\nB) By asking a friend\nC) By measuring the temperature\nD) Using specific formulas and algorithmic steps\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: What is the primary definition of Linear Transformations?\nA) The fundamental mathematical or scientific concept defining Linear Transformations\nB) A fictional character\nC) A totally unrelated historical event\nD) A type of biological organism\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: How is Rank of a Matrix typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By asking a friend\nC) By guessing randomly\nD) By measuring the temperature\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: Which of the following is a key property of Gaussian Elimination?\nA) It is edible\nB) It satisfies specific axioms and theorems related to Gaussian Elimination\nC) It is only found in space\nD) It is a color\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: Why is Orthogonal Matrices considered important?\nA) It is not important at all\nB) It causes global warming\nC) It tastes good\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: What is the primary definition of Diagonalization?\nA) A fictional character\nB) The fundamental mathematical or scientific concept defining Diagonalization\nC) A totally unrelated historical event\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: In the context of the syllabus, what does Inner Product Spaces represent?\nA) A holiday destination\nB) A type of food\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: In the context of the syllabus, what does Calculus represent?\nA) A core unit of study with specific learning outcomes\nB) A type of food\nC) A musical instrument\nD) A holiday destination\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: How is Differential Equations typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By guessing randomly\nD) By asking a friend\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: Which of the following is a key property of Integration?\nA) It is edible\nB) It is a color\nC) It is only found in space\nD) It satisfies specific axioms and theorems related to Integration\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: Which of the following is a key property of Limits?\nA) It is edible\nB) It is a color\nC) It satisfies specific axioms and theorems related to Limits\nD) It is only found in space\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Determinant of a Matrix represent?\nA) A holiday destination\nB) A type of food\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: Which of the following is a key property of Inverse of a Matrix?\nA) It satisfies specific axioms and theorems related to Inverse of a Matrix\nB) It is a color\nC) It is only found in space\nD) It is edible\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: Which of the following is a key property of System of Linear Equations?\nA) It is a color\nB) It is edible\nC) It satisfies specific axioms and theorems related to System of Linear Equations\nD) It is only found in space\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: What is the primary definition of Cramer's Rule?\nA) A type of biological organism\nB) The fundamental mathematical or scientific concept defining Cramer's Rule\nC) A totally unrelated historical event\nD) A fictional character\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: Why is Matrix Multiplication considered important?\nA) It is not important at all\nB) It tastes good\nC) It causes global warming\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: Which of the following is a key property of Eigenvalues?\nA) It is a color\nB) It is edible\nC) It is only found in space\nD) It satisfies specific axioms and theorems related to Eigenvalues\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: What is the primary definition of Eigenvectors?\nA) A fictional character\nB) The fundamental mathematical or scientific concept defining Eigenvectors\nC) A totally unrelated historical event\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: How is Vector Spaces typically calculated or derived?\nA) By guessing randomly\nB) By asking a friend\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: Which of the following is a key property of Linear Independence?\nA) It satisfies specific axioms and theorems related to Linear Independence\nB) It is edible\nC) It is only found in space\nD) It is a color\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: What is the primary definition of Basis and Dimension?\nA) A type of biological organism\nB) A totally unrelated historical event\nC) A fictional character\nD) The fundamental mathematical or scientific concept defining Basis and Dimension\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: Which of the following is a key property of Linear Transformations?\nA) It is edible\nB) It satisfies specific axioms and theorems related to Linear Transformations\nC) It is a color\nD) It is only found in space\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: Which of the following is a key property of Rank of a Matrix?\nA) It is only found in space\nB) It satisfies specific axioms and theorems related to Rank of a Matrix\nC) It is edible\nD) It is a color\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: Which of the following is a key property of Gaussian Elimination?\nA) It satisfies specific axioms and theorems related to Gaussian Elimination\nB) It is only found in space\nC) It is edible\nD) It is a color\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: Which of the following is a key property of Orthogonal Matrices?\nA) It is a color\nB) It is only found in space\nC) It satisfies specific axioms and theorems related to Orthogonal Matrices\nD) It is edible\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: Why is Diagonalization considered important?\nA) It causes global warming\nB) It tastes good\nC) It is not important at all\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: What is the primary definition of Inner Product Spaces?\nA) A type of biological organism\nB) A fictional character\nC) A totally unrelated historical event\nD) The fundamental mathematical or scientific concept defining Inner Product Spaces\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Which of the following is a key property of Calculus?\nA) It is a color\nB) It satisfies specific axioms and theorems related to Calculus\nC) It is only found in space\nD) It is edible\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: How is Differential Equations typically calculated or derived?\nA) By measuring the temperature\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By guessing randomly\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: In the context of the syllabus, what does Integration represent?\nA) A type of food\nB) A core unit of study with specific learning outcomes\nC) A musical instrument\nD) A holiday destination\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: In the context of the syllabus, what does Limits represent?\nA) A holiday destination\nB) A musical instrument\nC) A type of food\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: How is Determinant of a Matrix typically calculated or derived?\nA) By guessing randomly\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By measuring the temperature\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Inverse of a Matrix represent?\nA) A holiday destination\nB) A type of food\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: What is the primary definition of System of Linear Equations?\nA) The fundamental mathematical or scientific concept defining System of Linear Equations\nB) A type of biological organism\nC) A totally unrelated historical event\nD) A fictional character\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: What is the primary definition of Cramer's Rule?\nA) The fundamental mathematical or scientific concept defining Cramer's Rule\nB) A totally unrelated historical event\nC) A fictional character\nD) A type of biological organism\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: In the context of the syllabus, what does Matrix Multiplication represent?\nA) A holiday destination\nB) A musical instrument\nC) A type of food\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: Why is Eigenvalues considered important?\nA) It solves critical problems in the field\nB) It tastes good\nC) It causes global warming\nD) It is not important at all\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: Which of the following is a key property of Eigenvectors?\nA) It satisfies specific axioms and theorems related to Eigenvectors\nB) It is a color\nC) It is only found in space\nD) It is edible\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: How is Vector Spaces typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By guessing randomly\nD) By asking a friend\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: In the context of the syllabus, what does Linear Independence represent?\nA) A core unit of study with specific learning outcomes\nB) A musical instrument\nC) A type of food\nD) A holiday destination\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: In the context of the syllabus, what does Basis and Dimension represent?\nA) A type of food\nB) A musical instrument\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: How is Linear Transformations typically calculated or derived?\nA) By asking a friend\nB) By guessing randomly\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: What is the primary definition of Rank of a Matrix?\nA) A type of biological organism\nB) The fundamental mathematical or scientific concept defining Rank of a Matrix\nC) A totally unrelated historical event\nD) A fictional character\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: How is Gaussian Elimination typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By asking a friend\nD) By guessing randomly\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: What is the primary definition of Orthogonal Matrices?\nA) A totally unrelated historical event\nB) A type of biological organism\nC) The fundamental mathematical or scientific concept defining Orthogonal Matrices\nD) A fictional character\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: In the context of the syllabus, what does Diagonalization represent?\nA) A type of food\nB) A holiday destination\nC) A core unit of study with specific learning outcomes\nD) A musical instrument\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: In the context of the syllabus, what does Inner Product Spaces represent?\nA) A musical instrument\nB) A type of food\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Why is Calculus considered important?\nA) It solves critical problems in the field\nB) It causes global warming\nC) It tastes good\nD) It is not important at all\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: How is Differential Equations typically calculated or derived?\nA) By asking a friend\nB) By guessing randomly\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: In the context of the syllabus, what does Integration represent?\nA) A holiday destination\nB) A core unit of study with specific learning outcomes\nC) A type of food\nD) A musical instrument\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: What is the primary definition of Limits?\nA) A totally unrelated historical event\nB) The fundamental mathematical or scientific concept defining Limits\nC) A fictional character\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Determinant of a Matrix represent?\nA) A holiday destination\nB) A core unit of study with specific learning outcomes\nC) A type of food\nD) A musical instrument\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: Why is Inverse of a Matrix considered important?\nA) It solves critical problems in the field\nB) It is not important at all\nC) It tastes good\nD) It causes global warming\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: Why is System of Linear Equations considered important?\nA) It causes global warming\nB) It solves critical problems in the field\nC) It is not important at all\nD) It tastes good\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Why is Cramer's Rule considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It causes global warming\nD) It tastes good\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: Why is Matrix Multiplication considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It tastes good\nD) It causes global warming\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: Why is Eigenvalues considered important?\nA) It tastes good\nB) It is not important at all\nC) It causes global warming\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvectors represent?\nA) A type of food\nB) A musical instrument\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: How is Vector Spaces typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By guessing randomly\nC) By asking a friend\nD) By measuring the temperature\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: What is the primary definition of Linear Independence?\nA) A type of biological organism\nB) A totally unrelated historical event\nC) A fictional character\nD) The fundamental mathematical or scientific concept defining Linear Independence\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: In the context of the syllabus, what does Basis and Dimension represent?\nA) A core unit of study with specific learning outcomes\nB) A holiday destination\nC) A type of food\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: What is the primary definition of Linear Transformations?\nA) A fictional character\nB) A type of biological organism\nC) A totally unrelated historical event\nD) The fundamental mathematical or scientific concept defining Linear Transformations\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: Why is Rank of a Matrix considered important?\nA) It is not important at all\nB) It solves critical problems in the field\nC) It causes global warming\nD) It tastes good\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: Which of the following is a key property of Gaussian Elimination?\nA) It is edible\nB) It satisfies specific axioms and theorems related to Gaussian Elimination\nC) It is only found in space\nD) It is a color\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: What is the primary definition of Orthogonal Matrices?\nA) A type of biological organism\nB) A fictional character\nC) A totally unrelated historical event\nD) The fundamental mathematical or scientific concept defining Orthogonal Matrices\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: What is the primary definition of Diagonalization?\nA) A fictional character\nB) The fundamental mathematical or scientific concept defining Diagonalization\nC) A totally unrelated historical event\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: How is Inner Product Spaces typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By asking a friend\nD) By guessing randomly\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Which of the following is a key property of Calculus?\nA) It is only found in space\nB) It satisfies specific axioms and theorems related to Calculus\nC) It is a color\nD) It is edible\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: In the context of the syllabus, what does Differential Equations represent?\nA) A holiday destination\nB) A musical instrument\nC) A type of food\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: How is Integration typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By guessing randomly\nC) By asking a friend\nD) By measuring the temperature\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: How is Limits typically calculated or derived?\nA) By guessing randomly\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By measuring the temperature\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: Why is Determinant of a Matrix considered important?\nA) It tastes good\nB) It is not important at all\nC) It solves critical problems in the field\nD) It causes global warming\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Inverse of a Matrix represent?\nA) A core unit of study with specific learning outcomes\nB) A holiday destination\nC) A type of food\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: Which of the following is a key property of System of Linear Equations?\nA) It is a color\nB) It is only found in space\nC) It satisfies specific axioms and theorems related to System of Linear Equations\nD) It is edible\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Which of the following is a key property of Cramer's Rule?\nA) It is a color\nB) It is edible\nC) It is only found in space\nD) It satisfies specific axioms and theorems related to Cramer's Rule\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: Why is Matrix Multiplication considered important?\nA) It solves critical problems in the field\nB) It causes global warming\nC) It is not important at all\nD) It tastes good\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: How is Eigenvalues typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By asking a friend\nD) By guessing randomly\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: Why is Eigenvectors considered important?\nA) It is not important at all\nB) It tastes good\nC) It causes global warming\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: What is the primary definition of Vector Spaces?\nA) A totally unrelated historical event\nB) The fundamental mathematical or scientific concept defining Vector Spaces\nC) A fictional character\nD) A type of biological organism\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: How is Linear Independence typically calculated or derived?\nA) By guessing randomly\nB) Using specific formulas and algorithmic steps\nC) By asking a friend\nD) By measuring the temperature\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: In the context of the syllabus, what does Basis and Dimension represent?\nA) A musical instrument\nB) A core unit of study with specific learning outcomes\nC) A type of food\nD) A holiday destination\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: What is the primary definition of Linear Transformations?\nA) A totally unrelated historical event\nB) A fictional character\nC) A type of biological organism\nD) The fundamental mathematical or scientific concept defining Linear Transformations\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Rank of a Matrix represent?\nA) A holiday destination\nB) A type of food\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: Which of the following is a key property of Gaussian Elimination?\nA) It is a color\nB) It is only found in space\nC) It is edible\nD) It satisfies specific axioms and theorems related to Gaussian Elimination\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: How is Orthogonal Matrices typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By asking a friend\nC) By measuring the temperature\nD) By guessing randomly\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: In the context of the syllabus, what does Diagonalization represent?\nA) A core unit of study with specific learning outcomes\nB) A type of food\nC) A holiday destination\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: In the context of the syllabus, what does Inner Product Spaces represent?\nA) A type of food\nB) A core unit of study with specific learning outcomes\nC) A musical instrument\nD) A holiday destination\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: How is Calculus typically calculated or derived?\nA) By guessing randomly\nB) By asking a friend\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: In the context of the syllabus, what does Differential Equations represent?\nA) A type of food\nB) A musical instrument\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: What is the primary definition of Integration?\nA) A totally unrelated historical event\nB) A type of biological organism\nC) A fictional character\nD) The fundamental mathematical or scientific concept defining Integration\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: Which of the following is a key property of Limits?\nA) It is only found in space\nB) It is edible\nC) It is a color\nD) It satisfies specific axioms and theorems related to Limits\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: Which of the following is a key property of Determinant of a Matrix?\nA) It is only found in space\nB) It is a color\nC) It is edible\nD) It satisfies specific axioms and theorems related to Determinant of a Matrix\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Inverse of a Matrix represent?\nA) A musical instrument\nB) A holiday destination\nC) A core unit of study with specific learning outcomes\nD) A type of food\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: Which of the following is a key property of System of Linear Equations?\nA) It is only found in space\nB) It is edible\nC) It is a color\nD) It satisfies specific axioms and theorems related to System of Linear Equations\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Why is Cramer's Rule considered important?\nA) It causes global warming\nB) It is not important at all\nC) It tastes good\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: In the context of the syllabus, what does Matrix Multiplication represent?\nA) A type of food\nB) A musical instrument\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: How is Eigenvalues typically calculated or derived?\nA) By asking a friend\nB) By guessing randomly\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvectors represent?\nA) A musical instrument\nB) A type of food\nC) A core unit of study with specific learning outcomes\nD) A holiday destination\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: Why is Vector Spaces considered important?\nA) It is not important at all\nB) It causes global warming\nC) It solves critical problems in the field\nD) It tastes good\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: Which of the following is a key property of Linear Independence?\nA) It is only found in space\nB) It satisfies specific axioms and theorems related to Linear Independence\nC) It is a color\nD) It is edible\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: In the context of the syllabus, what does Basis and Dimension represent?\nA) A core unit of study with specific learning outcomes\nB) A holiday destination\nC) A type of food\nD) A musical instrument\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: Which of the following is a key property of Linear Transformations?\nA) It is only found in space\nB) It is a color\nC) It is edible\nD) It satisfies specific axioms and theorems related to Linear Transformations\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: Why is Rank of a Matrix considered important?\nA) It solves critical problems in the field\nB) It causes global warming\nC) It is not important at all\nD) It tastes good\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: In the context of the syllabus, what does Gaussian Elimination represent?\nA) A core unit of study with specific learning outcomes\nB) A musical instrument\nC) A holiday destination\nD) A type of food\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: Why is Orthogonal Matrices considered important?\nA) It tastes good\nB) It is not important at all\nC) It causes global warming\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: What is the primary definition of Diagonalization?\nA) A totally unrelated historical event\nB) A type of biological organism\nC) The fundamental mathematical or scientific concept defining Diagonalization\nD) A fictional character\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: Why is Inner Product Spaces considered important?\nA) It causes global warming\nB) It is not important at all\nC) It tastes good\nD) It solves critical problems in the field\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Which of the following is a key property of Calculus?\nA) It is a color\nB) It is edible\nC) It is only found in space\nD) It satisfies specific axioms and theorems related to Calculus\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: What is the primary definition of Differential Equations?\nA) A type of biological organism\nB) The fundamental mathematical or scientific concept defining Differential Equations\nC) A fictional character\nD) A totally unrelated historical event\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: Why is Integration considered important?\nA) It tastes good\nB) It solves critical problems in the field\nC) It is not important at all\nD) It causes global warming\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: How is Limits typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By guessing randomly\nC) By asking a friend\nD) By measuring the temperature\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Determinant of a Matrix'.",
+    "output_text": "Question: Which of the following is a key property of Determinant of a Matrix?\nA) It satisfies specific axioms and theorems related to Determinant of a Matrix\nB) It is edible\nC) It is only found in space\nD) It is a color\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inverse of a Matrix'.",
+    "output_text": "Question: In the context of the syllabus, what does Inverse of a Matrix represent?\nA) A type of food\nB) A holiday destination\nC) A musical instrument\nD) A core unit of study with specific learning outcomes\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'System of Linear Equations'.",
+    "output_text": "Question: What is the primary definition of System of Linear Equations?\nA) A type of biological organism\nB) A fictional character\nC) The fundamental mathematical or scientific concept defining System of Linear Equations\nD) A totally unrelated historical event\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Cramer's Rule'.",
+    "output_text": "Question: Which of the following is a key property of Cramer's Rule?\nA) It satisfies specific axioms and theorems related to Cramer's Rule\nB) It is a color\nC) It is edible\nD) It is only found in space\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Matrix Multiplication'.",
+    "output_text": "Question: Which of the following is a key property of Matrix Multiplication?\nA) It satisfies specific axioms and theorems related to Matrix Multiplication\nB) It is only found in space\nC) It is a color\nD) It is edible\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvalues'.",
+    "output_text": "Question: Which of the following is a key property of Eigenvalues?\nA) It satisfies specific axioms and theorems related to Eigenvalues\nB) It is only found in space\nC) It is a color\nD) It is edible\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Eigenvectors'.",
+    "output_text": "Question: In the context of the syllabus, what does Eigenvectors represent?\nA) A type of food\nB) A holiday destination\nC) A core unit of study with specific learning outcomes\nD) A musical instrument\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Vector Spaces'.",
+    "output_text": "Question: How is Vector Spaces typically calculated or derived?\nA) By asking a friend\nB) By guessing randomly\nC) Using specific formulas and algorithmic steps\nD) By measuring the temperature\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Independence'.",
+    "output_text": "Question: How is Linear Independence typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By guessing randomly\nC) By asking a friend\nD) By measuring the temperature\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Basis and Dimension'.",
+    "output_text": "Question: What is the primary definition of Basis and Dimension?\nA) A totally unrelated historical event\nB) A fictional character\nC) A type of biological organism\nD) The fundamental mathematical or scientific concept defining Basis and Dimension\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Linear Transformations'.",
+    "output_text": "Question: What is the primary definition of Linear Transformations?\nA) A type of biological organism\nB) A fictional character\nC) The fundamental mathematical or scientific concept defining Linear Transformations\nD) A totally unrelated historical event\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Rank of a Matrix'.",
+    "output_text": "Question: Why is Rank of a Matrix considered important?\nA) It solves critical problems in the field\nB) It tastes good\nC) It causes global warming\nD) It is not important at all\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Gaussian Elimination'.",
+    "output_text": "Question: What is the primary definition of Gaussian Elimination?\nA) The fundamental mathematical or scientific concept defining Gaussian Elimination\nB) A totally unrelated historical event\nC) A type of biological organism\nD) A fictional character\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Orthogonal Matrices'.",
+    "output_text": "Question: What is the primary definition of Orthogonal Matrices?\nA) A fictional character\nB) A totally unrelated historical event\nC) A type of biological organism\nD) The fundamental mathematical or scientific concept defining Orthogonal Matrices\nCorrect: D"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Diagonalization'.",
+    "output_text": "Question: Why is Diagonalization considered important?\nA) It tastes good\nB) It causes global warming\nC) It solves critical problems in the field\nD) It is not important at all\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Inner Product Spaces'.",
+    "output_text": "Question: In the context of the syllabus, what does Inner Product Spaces represent?\nA) A type of food\nB) A core unit of study with specific learning outcomes\nC) A musical instrument\nD) A holiday destination\nCorrect: B"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Calculus'.",
+    "output_text": "Question: Which of the following is a key property of Calculus?\nA) It satisfies specific axioms and theorems related to Calculus\nB) It is edible\nC) It is only found in space\nD) It is a color\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Differential Equations'.",
+    "output_text": "Question: Which of the following is a key property of Differential Equations?\nA) It is only found in space\nB) It is a color\nC) It satisfies specific axioms and theorems related to Differential Equations\nD) It is edible\nCorrect: C"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Integration'.",
+    "output_text": "Question: How is Integration typically calculated or derived?\nA) Using specific formulas and algorithmic steps\nB) By measuring the temperature\nC) By guessing randomly\nD) By asking a friend\nCorrect: A"
+  },
+  {
+    "input_text": "Task: Create a multiple choice question about 'Limits'.",
+    "output_text": "Question: How is Limits typically calculated or derived?\nA) By asking a friend\nB) By measuring the temperature\nC) By guessing randomly\nD) Using specific formulas and algorithmic steps\nCorrect: D"
+  }
+]
