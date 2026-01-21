@@ -1,139 +1,81 @@
-# Syllabus to Quiz Platform
+# SocratAI 🎓
 
-A platform that converts syllabus images into adaptive quiz modules using local AI models. Upload an image of any syllabus or topic list, and get intelligent MCQ quizzes tailored to your performance level.
+**SocratAI** is an intelligent, adaptive quiz platform that transforms syllabus images into personalized learning experiences. Powered by **Google Gemini AI** and **EasyOCR**, it analyses your learning material to generate high-quality questions, adapts to your performance level, and tracks your cognitive growth using **Bloom's Taxonomy**.
 
-## ✨ Features
+## ✨ Key Features
 
-- 📸 **Image Upload**: Upload syllabus/topic images (PNG, JPG, JPEG)
-- 🔍 **OCR & Topic Extraction**: Automatically extracts text and identifies topics using EasyOCR
-- 📝 **Quiz Generation**: Creates 15-20 MCQ questions based on extracted topics
-- 🎯 **Adaptive Difficulty**: 
-  - Low scores (<60%) → Easier follow-up quiz
-  - High scores (≥80%) → Harder follow-up quiz
-  - Medium scores → Moderate difficulty
-- 📊 **Performance Analytics**: 
-  - Score trends over time
-  - Topic-wise performance charts
-  - Average scores and statistics
-- 🎨 **Clean UI**: Minimal, modern interface built with Tailwind CSS
+*   **📸 Syllabus to Quiz**: Upload an image of any syllabus or textbook page. The system automatically extracts text and identifies key topics.
+*   **🧠 Intelligent Question Generation**: Powered by **Google Gemini**, creating valid MCQs with distinct difficulty levels (Easy, Medium, Hard).
+*   **🔄 Adaptive Learning**: The difficulty evolves based on your performance.
+    *   **Smooth Progression**: Difficulty increases gradually (Easy → Medium → Hard) to ensure steady learning.
+    *   **Anti-Repetition**: The AI remembers previous questions in a session and avoids repeating them.
+*   **📊 Bloom's Taxonomy Analytics**:
+    *   Questions are tagged by cognitive level (Remember, Apply, Analyze, etc.).
+    *   **Radar Charts** visualize your strengths and weaknesses across these cognitive domains.
+*   **🔐 Secure Authentication**: Full user system with Sign Up/Login, JWT authentication, and secure password hashing.
+*   **🎨 Enhaced UX**: A clean, modern interface with expandable results, detailed feedback, and no auto-redirects.
 
-## 🛠 Tech Stack
-
-- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
-- **Backend**: FastAPI, Python 3.8+
-- **ML Models**: 
-  - Phi-3-mini (local, free) for quiz generation
-  - EasyOCR for text extraction from images
-- **Database**: SQLite (lightweight, no setup required)
-- **Charts**: Recharts for data visualization
-
-## 🚀 Quick Start
-
-### Option 1: Using Startup Scripts (macOS/Linux)
-
-```bash
-# Terminal 1 - Start Backend
-./start_backend.sh
-
-# Terminal 2 - Start Frontend  
-./start_frontend.sh
-```
-
-### Option 2: Manual Setup
-
-#### Backend Setup
-
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
-```
-
-Backend runs on `http://localhost:8000`
-
-#### Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Frontend runs on `http://localhost:3000`
-
-## 📖 Usage
-
-1. **Upload Image**: Go to `http://localhost:3000` and upload a syllabus image
-2. **View Topics**: See automatically extracted topics from your image
-3. **Take Initial Quiz**: Start with a 15-20 question MCQ test
-4. **Get Results**: View your score and performance breakdown
-5. **Adaptive Quiz**: Take a follow-up quiz adjusted to your performance level
-6. **View Statistics**: Check your performance trends and topic-wise scores
-
-## 🎯 How It Works
-
-1. **Image Processing**: 
-   - Uploaded image is processed using EasyOCR
-   - Text is extracted and cleaned
-   - Topics are identified using pattern matching
-
-2. **Quiz Generation**:
-   - Uses Phi-3-mini model (or rule-based fallback) to generate questions
-   - Questions are tailored to extracted topics
-   - Difficulty can be adjusted (easy/medium/hard)
-
-3. **Adaptive Learning**:
-   - Initial quiz is medium difficulty
-   - Performance determines next quiz difficulty
-   - System tracks all attempts and scores
-
-4. **Analytics**:
-   - All quiz attempts are stored
-   - Performance charts show progress over time
-   - Topic performance helps identify strengths/weaknesses
-
-## 📋 Requirements
-
-- Python 3.8+
-- Node.js 18+
-- 8GB+ RAM (for Phi-3 model, optional)
-- 10GB+ disk space (for model download, optional)
-
-## 🔧 Configuration
+## 🛠️ Technology Stack
 
 ### Backend
-- Default port: `8000`
-- Database: `backend/quiz_data.db` (auto-created)
-- Uploads: `backend/uploads/` (auto-created)
+*   **Framework**: FastAPI (Python)
+*   **Database**: SQLite (local)
+*   **AI Engine**: Google Gemini API (Content Generation)
+*   **OCR Engine**: EasyOCR (Local Text Extraction)
+*   **Auth**: Python-Jose (JWT) + Passlib (Bcrypt)
 
 ### Frontend
-- Default port: `3000`
-- API URL: Set `NEXT_PUBLIC_API_URL` in `.env.local` if different
+*   **Framework**: Next.js 14 (React)
+*   **Styling**: Tailwind CSS
+*   **Visualization**: Recharts (Radar/Area charts)
+*   **State Management**: React Context (AuthProvider)
 
-## 🐛 Troubleshooting
+## 🚀 Getting Started
 
-See [SETUP.md](./SETUP.md) for detailed troubleshooting guide.
+### Prerequisites
+*   Python 3.8+
+*   Node.js 18+
+*   Google Gemini API Key
 
-**Common Issues:**
-- **Model download fails**: System automatically uses rule-based generation (works offline)
-- **OCR not working**: Ensure image is clear and readable
-- **Port conflicts**: Change ports in config files
+### 1. Backend Setup
+```bash
+cd backend
 
-## 📝 Notes
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-- **First Run**: Phi-3 model download (~7GB) happens automatically on first quiz generation
-- **Offline Mode**: Rule-based quiz generation works without internet or model
-- **Performance**: Phi-3 provides better questions but requires more resources
+# Install dependencies
+pip install -r requirements.txt
 
-## 🎓 Example Use Cases
+# Create .env file
+echo "GEMINI_API_KEY=your_key_here" > .env
+echo "SECRET_KEY=your_random_secret_string" >> .env
 
-- Students preparing for exams
-- Teachers creating practice quizzes
-- Self-assessment and learning
-- Topic review and reinforcement
+# Run server
+uvicorn main:app --reload
+```
+*Backend runs on `http://localhost:8000`*
+
+### 2. Frontend Setup
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+*Frontend runs on `http://localhost:3000`*
+
+## 📖 Usage Guide
+1.  **Sign Up**: Create an account to save your progress.
+2.  **Upload**: Upload a clear image of your syllabus or notes.
+3.  **Take Quiz**: The first quiz will be an "Initial" assessment.
+4.  **Review**: Check the detailed results page to learn from mistakes.
+5.  **Adapt**: Continue with "Adaptive Quizzes" to challenge yourself with new questions at the appropriate difficulty level.
+6.  **Track**: View the "Stats" dashboard to see your Bloom's Taxonomy radar chart and score history.
 
 ## 📄 License
-
-This project is open source and available for educational purposes.
+This project is open-source and intended for educational purposes.
