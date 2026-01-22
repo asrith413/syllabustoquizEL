@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { uploadImage } from '@/lib/api'
 
 interface ImageUploadProps {
-  onSuccess: (sessionId: string, topics: string[]) => void
+  onSuccess: (sessionId: string, topics: string[], previewUrl: string | null) => void
 }
 
 export default function ImageUpload({ onSuccess }: ImageUploadProps) {
@@ -19,7 +19,7 @@ export default function ImageUpload({ onSuccess }: ImageUploadProps) {
       if (selectedFile.type.startsWith('image/')) {
         setFile(selectedFile)
         setError(null)
-        
+
         // Create preview
         const reader = new FileReader()
         reader.onloadend = () => {
@@ -43,7 +43,7 @@ export default function ImageUpload({ onSuccess }: ImageUploadProps) {
 
     try {
       const result = await uploadImage(file)
-      onSuccess(result.session_id, result.topics)
+      onSuccess(result.session_id, result.topics, preview)
     } catch (err: any) {
       setError(err.response?.data?.detail || 'Upload failed. Please try again.')
     } finally {
@@ -62,7 +62,7 @@ export default function ImageUpload({ onSuccess }: ImageUploadProps) {
         </p>
       </div>
 
-      <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-primary-500 transition-colors">
+      <div className="relative group border-2 border-dashed border-indigo-200 rounded-xl p-12 text-center hover:border-indigo-500 hover:bg-indigo-50/50 transition-all duration-300 ease-in-out cursor-pointer">
         <input
           type="file"
           accept="image/*"
@@ -72,26 +72,28 @@ export default function ImageUpload({ onSuccess }: ImageUploadProps) {
         />
         <label
           htmlFor="file-upload"
-          className="cursor-pointer flex flex-col items-center"
+          className="cursor-pointer flex flex-col items-center justify-center w-full h-full"
         >
-          <svg
-            className="w-12 h-12 text-gray-400 mb-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-            />
-          </svg>
-          <span className="text-gray-600 font-medium">
-            {file ? file.name : 'Click to upload or drag and drop'}
+          <div className="bg-indigo-100 p-4 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+            <svg
+              className="w-10 h-10 text-indigo-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+              />
+            </svg>
+          </div>
+          <span className="text-xl font-semibold text-gray-700 mb-1 group-hover:text-indigo-700">
+            {file ? file.name : 'Upload Syllabus'}
           </span>
-          <span className="text-sm text-gray-500 mt-2">
-            PNG, JPG, JPEG up to 10MB
+          <span className="text-sm text-gray-500 max-w-xs mx-auto">
+            {file ? 'Click to change file' : 'Drag & drop or click to browse files (PNG, JPG)'}
           </span>
         </label>
       </div>

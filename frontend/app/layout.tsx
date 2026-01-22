@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
+import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
+import { AuthProvider } from '@/context/AuthContext'
+
+const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Syllabus to Quiz',
-  description: 'Convert syllabus images into adaptive quiz modules',
+  title: 'SocratAI - Master Your Syllabus',
+  description: 'AI-powered adaptive learning platform',
 }
 
 export default function RootLayout({
@@ -13,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className={outfit.className}>
+        <AuthProvider>
+          {children}
+        </AuthProvider>
+      </body>
     </html>
   )
 }

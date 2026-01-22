@@ -13,6 +13,13 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  AreaChart,
+  Area,
 } from 'recharts'
 
 interface StatsDashboardProps {
@@ -54,9 +61,19 @@ export default function StatsDashboard({ sessionId, onBack, onStartAdaptiveQuiz 
   if (error || !stats) {
     return (
       <div className="text-center py-12">
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded mb-4">
-          {error || 'No statistics available'}
+        <div className="bg-blue-50 border border-blue-200 text-blue-800 px-4 py-3 rounded mb-4">
+          {error === 'No stats found' ? 'You haven\'t taken any quizzes for this session yet.' : (error || 'No statistics available')}
         </div>
+
+        {error === 'No stats found' ? (
+          <button
+            onClick={onStartAdaptiveQuiz} // Re-using this to start initial quiz would be better, but adaptive works as "Start"
+            className="bg-primary-600 text-white py-2 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors mr-3"
+          >
+            Take a Quiz
+          </button>
+        ) : null}
+
         <button
           onClick={onBack}
           className="text-primary-600 hover:text-primary-700 font-medium"
@@ -72,10 +89,24 @@ export default function StatsDashboard({ sessionId, onBack, onStartAdaptiveQuiz 
     score: quiz.score,
   }))
 
-  const topicData = Object.entries(stats.topic_performance).map(([topic, score]) => ({
-    topic: topic.length > 30 ? topic.substring(0, 30) + '...' : topic,
-    score: score as number,
-  }))
+  const topicData = stats.bloom_performance
+    ? Object.entries(stats.bloom_performance).map(([level, score]) => ({
+      subject: level,
+      A: score as number,
+      fullMark: 100,
+    }))
+    : Object.entries(stats.topic_performance).map(([topic, score]) => ({
+      subject: topic.length > 20 ? topic.substring(0, 20) + '...' : topic,
+      A: score as number,
+      fullMark: 100,
+    }))
+
+  const timeData = stats.bloom_time_performance
+    ? Object.entries(stats.bloom_time_performance).map(([level, time]) => ({
+      name: level,
+      seconds: time as number,
+    }))
+    : []
 
   return (
     <div className="space-y-6">
@@ -125,35 +156,63 @@ export default function StatsDashboard({ sessionId, onBack, onStartAdaptiveQuiz 
           Quiz Performance Over Time
         </h3>
         <ResponsiveContainer width="100%" height={300}>
-          <LineChart data={quizHistoryData}>
+          <AreaChart data={quizHistoryData}>
+            <defs>
+              <linearGradient id="colorScore" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+              </linearGradient>
+            </defs>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis domain={[0, 100]} />
             <Tooltip />
             <Legend />
-            <Line
+            <Area
               type="monotone"
               dataKey="score"
-              stroke="#0ea5e9"
-              strokeWidth={2}
+              stroke="#8884d8"
+              fillOpacity={1}
+              fill="url(#colorScore)"
               name="Score (%)"
             />
-          </LineChart>
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
+      <div className="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 className="text-lg font-semibold text-gray-800 mb-4">
+          Cognitive Proficiency (Bloom's Taxonomy)
+        </h3>
+        <ResponsiveContainer width="100%" height={400}>
+          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={topicData}>
+            <PolarGrid />
+            <PolarAngleAxis dataKey="subject" />
+            <PolarRadiusAxis domain={[0, 100]} />
+            <Radar
+              name="Score"
+              dataKey="A"
+              stroke="#8884d8"
+              fill="#8884d8"
+              fillOpacity={0.6}
+            />
+            <Tooltip />
+            <Legend />
+          </RadarChart>
         </ResponsiveContainer>
       </div>
 
       <div className="bg-white border border-gray-200 rounded-lg p-6">
         <h3 className="text-lg font-semibold text-gray-800 mb-4">
-          Topic Performance
+          Average Time per Cognitive Level (Seconds)
         </h3>
-        <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={topicData.slice(0, 10)}>
+        <ResponsiveContainer width="100%" height={300}>
+          <BarChart data={timeData}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="topic" angle={-45} textAnchor="end" height={100} />
-            <YAxis domain={[0, 100]} />
-            <Tooltip />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip formatter={(value: number) => [`${value.toFixed(1)}s`, 'Avg Time']} />
             <Legend />
-            <Bar dataKey="score" fill="#0ea5e9" name="Score (%)" />
+            <Bar dataKey="seconds" name="Avg Time (s)" fill="#f59e0b" radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -172,6 +231,6 @@ export default function StatsDashboard({ sessionId, onBack, onStartAdaptiveQuiz 
           Back to Topics
         </button>
       </div>
-    </div>
+    </div >
   )
 }

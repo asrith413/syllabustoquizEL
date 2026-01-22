@@ -12,3 +12,5 @@ ENV/
 uploads/
 *.log
 .DS_Store
+
+.env

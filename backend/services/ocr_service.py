@@ -10,9 +10,6 @@ import PIL.Image
 if not hasattr(PIL.Image, 'ANTIALIAS'):
     PIL.Image.ANTIALIAS = PIL.Image.LANCZOS
 
-import easyocr
-
-
 class OCRService:
     def __init__(self):
         # Lazy initialization - only initialize when needed
@@ -27,9 +24,8 @@ class OCRService:
         
         try:
             print("Initializing OCR service...")
-            # Fix SSL certificate issues on macOS
+            # Fix SSL certificate issues on macOS/Windows
             # EasyOCR downloads models which can fail due to SSL certificate issues
-            import ssl
             
             # Temporarily disable SSL verification for EasyOCR model downloads
             # This is safe since we're downloading from known sources
@@ -49,7 +45,6 @@ class OCRService:
             print("OCR will use fallback text extraction")
             # Restore SSL context even on error
             try:
-                import ssl
                 ssl._create_default_https_context = ssl._create_unverified_context
             except:
                 pass
@@ -170,6 +165,8 @@ class OCRService:
                         current_part = next_part
                 merged_parts.append(current_part)
                 lines.extend(merged_parts)
+            else:
+                lines.append(r_line) # Just in case
 
         topics = []
         for line in lines:
